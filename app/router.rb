@@ -23,6 +23,6 @@ class Router
     handler.call(request)
   rescue => e
     @logger.log("Error handling request: #{e.message}")
-    HttpResponse.new(500, {'Content-Type' => 'text/plain'}, 'Internal Server Error')
+    HttpResponse.new(404, {'Content-Type' => 'text/plain'}, 'Not Found')
   end
 end

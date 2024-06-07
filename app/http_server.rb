@@ -18,10 +18,12 @@ class HttpServer
     require_relative 'resources/echo_resource'
     require_relative 'resources/root_resource'
     require_relative 'resources/user_agent_resource'
+    require_relative 'resources/file_resource'
 
     @router.add_route(/^\/$/, RootResource.new)
     @router.add_route(/^\/echo/, EchoResource.new)
     @router.add_route(/^\/user-agent/, UserAgentResource.new)
+    @router.add_route(/^\/files/, FileResource.new)
     @router.set_default_handler(->(request) { HttpResponse.new(404, {'Content-Type' => 'text/plain'}, 'Not Found') })
   end
 
