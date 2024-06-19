@@ -1,38 +1,46 @@
 [![progress-banner](https://backend.codecrafters.io/progress/http-server/c4f4e3e1-6bf1-45f3-b9e2-883570c9c144)](https://app.codecrafters.io/users/codecrafters-bot?r=2qF)
 
-This is a starting point for Ruby solutions to the
-["Build Your Own HTTP server" Challenge](https://app.codecrafters.io/courses/http-server/overview).
+# Build Your Own HTTP Server in Ruby
 
-[HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) is the
-protocol that powers the web. In this challenge, you'll build a HTTP/1.1 server
-that is capable of serving multiple clients.
+Welcome to the "Build Your Own HTTP Server" challenge by Codecrafters! In this project, you will build an HTTP/1.1 server from scratch using Ruby. This challenge will teach you about TCP servers, HTTP request syntax, and more, while you build a fully functional web server capable of serving multiple clients.
 
-Along the way you'll learn about TCP servers,
-[HTTP request syntax](https://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html),
-and more.
+## Project Structure
 
-**Note**: If you're viewing this repo on GitHub, head over to
-[codecrafters.io](https://codecrafters.io) to try the challenge.
-
-# Passing the first stage
-
-The entry point for your HTTP server implementation is in `app/server.rb`. Study
-and uncomment the relevant code, and push your changes to pass the first stage:
-
-```sh
-git add .
-git commit -m "pass 1st stage" # any msg
-git push origin master
+```
+.
+├── Gemfile
+├── Gemfile.lock
+├── README.md
+├── app
+│   ├── http_handler.rb
+│   ├── http_headers.rb
+│   ├── http_parser.rb
+│   ├── http_request.rb
+│   ├── http_response.rb
+│   ├── http_server.rb
+│   ├── http_status.rb
+│   ├── logger.rb
+│   ├── router.rb
+│   ├── resources
+│   │   ├── echo_resource.rb
+│   │   ├── file_resource.rb
+│   │   ├── root_resource.rb
+│   │   ├── user_agent_resource.rb
+│   └── server.rb
+├── codecrafters.yml
+└── your_server.sh
 ```
 
-Time to move on to the next stage!
+## Getting Started
 
-# Stage 2 & beyond
+### Prerequisites
 
-Note: This section is for stages 2 and beyond.
+Ensure you have Ruby (3.3) installed locally.
 
-1. Ensure you have `ruby (3.3)` installed locally
-1. Run `./your_server.sh` to run your program, which is implemented in
-   `app/server.rb`.
-1. Commit your changes and run `git push origin master` to submit your solution
-   to CodeCrafters. Test output will be streamed to your terminal.
+### Running the Server
+
+The entry point for your HTTP server implementation is in `app/server.rb`. To run the server, use the provided script:
+
+```sh
+./your_server.sh
+```
